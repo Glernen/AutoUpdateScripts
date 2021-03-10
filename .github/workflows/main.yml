@@ -25,8 +25,8 @@ jobs:
         if: env.PAT
         with:
           source_repo: "https://github.com/Wake326/free.git"
-          source_branch: "FreeVPN"
-          destination_branch: "master"
+          source_branch: "master"
+          destination_branch: "main/FreeVPN"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
       # 我自己同步到gitee使用，其他人可忽略
       #- name: sync github -> gitee
