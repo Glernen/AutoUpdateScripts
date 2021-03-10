@@ -3,6 +3,8 @@
 
 UpdateFreeVPN.yml 免费翻墙VPN账号同步更新
 
+UpdateDockerSource.yml 京东脚本Docker的容器源代码同步更新
+
 # FreeVPN
 免费翻墙VPN账号同步更新
 
