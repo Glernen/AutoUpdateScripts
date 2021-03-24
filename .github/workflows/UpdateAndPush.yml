@@ -1,13 +1,13 @@
 # File: .github/workflows/repo-sync.yml
-name: 自动同步【仓库】并推送到Gitee🔄
+name: 同步【仓库】并推送到Gitee🔄
 on:
   schedule:
     - cron: '0 */3 * * *'
   workflow_dispatch:
-  watch:
-    types: started
-  repository_dispatch:
-    types: repo-sync
+  # watch:
+  #   types: started
+  # repository_dispatch:
+  #   types: repo-sync
 jobs:
   repo-sync:
     env:
