@@ -1,8 +1,9 @@
 # File: .github/workflows/repo-sync.yml
+#废弃。合并到同一文件内
 name: 自动同步【DockerSource】分支🔄
 on:
-  schedule:
-    - cron: '0 */3 * * *'
+  #schedule:
+    #- cron: '0 */3 * * *'
   workflow_dispatch:
   watch:
     types: started

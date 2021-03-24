@@ -1,5 +1,5 @@
 # File: .github/workflows/repo-sync.yml
-name: 自动同步【仓库】分支🔄
+name: 自动同步【仓库】并推送到Gitee🔄
 on:
   schedule:
     - cron: '0 */3 * * *'
@@ -38,13 +38,13 @@ jobs:
           source_branch: "source"
           destination_branch: "DockerSource"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
-      # 我自己同步到gitee使用，其他人可忽略
-      #- name: sync github -> gitee
-        #uses: Yikun/hub-mirror-action@master
-        #if: env.dst_key
-        #with:
-          #src: github/wuzhi01
-          #dst: gitee/shuye72
-          #static_list: "MyActions"
-          #dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          #dst_token: ${{ secrets.GITEE_TOKEN }}
+
+      # 单一仓库内容内容同步到自己的gitee上
+      - name: 开始同步内容到【Gitee】🔄
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/h455257166
+          dst: gitee/h455257166
+          static_list: "AutoUpdateScripts"
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
