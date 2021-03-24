@@ -39,6 +39,9 @@ jobs:
           destination_branch: "DockerSource"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
+  github2gitee:
+    runs-on: ubuntu-latest
+    steps:
       # 单一仓库内容内容同步到自己的gitee上
       - name: 开始同步内容到【Gitee】🔄
         uses: Yikun/hub-mirror-action@master
