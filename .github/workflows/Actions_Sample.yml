@@ -1,6 +1,6 @@
 # File: .github/workflows/repo-sync.yml
 #废弃。合并到同一文件内
-name: 自动同步【DockerSource】分支🔄
+name: Github Actions 教程范文
 on:
   #schedule:
     #- cron: '0 */3 * * *'
