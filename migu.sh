@@ -5,30 +5,25 @@ curl -H "Cookie: ${MIGUCOOKIE1}" -X POST 'https://gw.aikan.miguvideo.com/ygw/api
 echo ''
 echo '---------------check sign---------------'
 curl -H "Cookie: ${MIGUCOOKIE1}" -X POST 'https://gw.aikan.miguvideo.com/ygw/api/dispatch/migu-sign/checkSign'
-echo ''
-echo '---------------活动签到---------------'
-curl -H "Cookie: ${MIGUCOOKIE1}" -X GET 'https://aikanvod.miguvideo.com/video/p/i_hpForAnouting.jsp?user=guest&vt=9&channalNo=&ordersrc='
+
 #咪咕账号2
 echo '------------------sign------------------'
 curl -H "Cookie: ${MIGUCOOKIE2}" -X POST 'https://gw.aikan.miguvideo.com/ygw/api/dispatch/migu-sign/sign'
 echo ''
 echo '---------------check sign---------------'
 curl -H "Cookie: ${MIGUCOOKIE2}" -X POST 'https://gw.aikan.miguvideo.com/ygw/api/dispatch/migu-sign/checkSign'
-echo '---------------活动签到---------------'
-curl -H "Cookie: ${MIGUCOOKIE2}" -X GET 'https://aikanvod.miguvideo.com/video/p/i_hpForAnouting.jsp?user=guest&vt=9&channalNo=&ordersrc='
+
 #咪咕账号3
 echo '------------------sign------------------'
 curl -H "Cookie: ${MIGUCOOKIE3}" -X POST 'https://gw.aikan.miguvideo.com/ygw/api/dispatch/migu-sign/sign'
 echo ''
 echo '---------------check sign---------------'
 curl -H "Cookie: ${MIGUCOOKIE3}" -X POST 'https://gw.aikan.miguvideo.com/ygw/api/dispatch/migu-sign/checkSign'
-echo '---------------活动签到---------------'
-curl -H "Cookie: ${MIGUCOOKIE3}" -X GET 'https://aikanvod.miguvideo.com/video/p/i_hpForAnouting.jsp?user=guest&vt=9&channalNo=&ordersrc='
+
 #咪咕账号4
 echo '------------------sign------------------'
 curl -H "Cookie: ${MIGUCOOKIE4}" -X POST 'https://gw.aikan.miguvideo.com/ygw/api/dispatch/migu-sign/sign'
 echo ''
 echo '---------------check sign---------------'
 curl -H "Cookie: ${MIGUCOOKIE4}" -X POST 'https://gw.aikan.miguvideo.com/ygw/api/dispatch/migu-sign/checkSign'
-echo '---------------活动签到---------------'
-curl -H "Cookie: ${MIGUCOOKIE4}" -X GET 'https://aikanvod.miguvideo.com/video/p/i_hpForAnouting.jsp?user=guest&vt=9&channalNo=&ordersrc='
+
