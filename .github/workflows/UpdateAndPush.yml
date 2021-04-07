@@ -39,6 +39,17 @@ jobs:
           destination_branch: "DockerSource"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
+
+      - name: 开始同步【咪咕爱看签到脚本】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/QikaiXu/migu-sign.git"
+          source_branch: "main"
+          destination_branch: "MiGuAiKan10086"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+          
+          
   github2gitee:
     runs-on: ubuntu-latest
     steps:
