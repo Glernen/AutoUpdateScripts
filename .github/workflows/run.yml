@@ -18,6 +18,9 @@ jobs:
 
     - name: sign
       env:
-        COOKIE: ${{ secrets.COOKIE }}
+        MIGUCOOKIE1: ${{ secrets.MIGUCOOKIE1 }}
+        MIGUCOOKIE2: ${{ secrets.MIGUCOOKIE2 }}
+        MIGUCOOKIE3: ${{ secrets.MIGUCOOKIE3 }}
+        MIGUCOOKIE4: ${{ secrets.MIGUCOOKIE4 }}
       run: |
         ./migu.sh
