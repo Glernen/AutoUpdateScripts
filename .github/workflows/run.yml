@@ -1,6 +1,7 @@
-name: migu-sign
+name: 咪咕爱看签到
 
 on:
+  workflow_dispatch:
   push:
   pull_request:
   watch:
