@@ -37,4 +37,3 @@ mToken=eyJ0aW1lc3RhbXAiOjE2MTA3MTExMTM2MDQsInJvd1Rva2VuIjoiOWVkOGUwZTVlMjimOGRmZ
 > To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days.
 
 也就是说，**定时执行的任务需要每隔 60 天激活一次**。
-
