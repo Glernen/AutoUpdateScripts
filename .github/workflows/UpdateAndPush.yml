@@ -29,15 +29,15 @@ jobs:
           destination_branch: "FreeVPN"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
-
-      - name: 开始同步【DockerSource】🔄
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/SuperManito/JD-FreeFuck.git"
-          source_branch: "source"
-          destination_branch: "DockerSource"
-          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+# 作者已删库，不再更新同步
+#       - name: 开始同步【DockerSource】🔄
+#         uses: repo-sync/github-sync@v2
+#         if: env.PAT
+#         with:
+#           source_repo: "https://github.com/SuperManito/JD-FreeFuck.git"
+#           source_branch: "source"
+#           destination_branch: "DockerSource"
+#           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
 
       - name: 开始同步【咪咕爱看签到脚本】🔄
