@@ -16,9 +16,16 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
+
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
+
+    - name: 更新为中国时间
+      run: |
+        sudo rm -rf /etc/localtime 
+        sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+        date
 
       - name: 开始同步【FreeVPN】🔄
         uses: repo-sync/github-sync@v2
@@ -29,7 +36,7 @@ jobs:
           destination_branch: "FreeVPN"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
-# 作者已删库，不再更新同步
+# 作者已删库，不再更新
 #       - name: 开始同步【DockerSource】🔄
 #         uses: repo-sync/github-sync@v2
 #         if: env.PAT
@@ -48,7 +55,18 @@ jobs:
 #           source_branch: "main"
 #           destination_branch: "MiGuAiKan10086"
 #           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
-          
+
+
+#Fiddler中文版
+      - name: 开始同步【Fiddler中文版】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/gabrielxvx/zh-fiddler.git"
+          source_branch: "master"
+          destination_branch: "Fiddler"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+
           
   github2gitee:
     runs-on: ubuntu-latest
