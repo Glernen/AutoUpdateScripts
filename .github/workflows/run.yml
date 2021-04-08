@@ -5,7 +5,7 @@ on:
   push:
   pull_request:
   watch:
-    types: [ started ]
+    types: started
   schedule:
     - cron: '0 */3 * * *'
 
