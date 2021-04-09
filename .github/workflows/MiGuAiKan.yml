@@ -1,0 +1,28 @@
+https://raw.githubusercontent.com/h455257166/AutoUpdateScripts/MiGuAiKan10086/migu.sh
+
+name: 咪咕爱看签到
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+  watch:
+    types: started
+  schedule:
+    - cron: '0 */3 * * *'
+  
+jobs:
+  migu-sign:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: sign
+      env:
+        MIGUCOOKIE1: ${{ secrets.MIGUCOOKIE1 }}
+        MIGUCOOKIE2: ${{ secrets.MIGUCOOKIE2 }}
+        MIGUCOOKIE3: ${{ secrets.MIGUCOOKIE3 }}
+        MIGUCOOKIE4: ${{ secrets.MIGUCOOKIE4 }}
+      run: |
+        https://raw.githubusercontent.com/h455257166/AutoUpdateScripts/MiGuAiKan10086/migu.sh
