@@ -25,4 +25,6 @@ jobs:
         MIGUCOOKIE3: ${{ secrets.MIGUCOOKIE3 }}
         MIGUCOOKIE4: ${{ secrets.MIGUCOOKIE4 }}
       run: |
-        https://raw.githubusercontent.com/h455257166/AutoUpdateScripts/MiGuAiKan10086/migu.sh
+        wget https://raw.githubusercontent.com/h455257166/AutoUpdateScripts/MiGuAiKan10086/migu.sh
+        ./migu.sh
+        
