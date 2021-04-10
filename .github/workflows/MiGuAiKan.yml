@@ -1,6 +1,6 @@
 #https://raw.githubusercontent.com/h455257166/AutoUpdateScripts/MiGuAiKan10086/migu.sh
 
-name: 咪咕爱看签到
+name: 咪咕爱看签到(main)
 
 on:
   workflow_dispatch:
