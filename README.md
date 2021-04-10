@@ -22,3 +22,11 @@
 同步的仓库为 https://github.com/QikaiXu/migu-sign.git   [ main ] 分支中的内容
 
 更新内容位于 [ MiGuAiKan10086 ] 分支
+
+# Fiddler Web Debugger中文版
+Fiddler汉化版同步更新
+
+同步的仓库为 https://github.com/gabrielxvx/zh-fiddler.git   [ master ] 分支中的内容
+
+更新内容位于 [ Fiddler ] 分支
+
