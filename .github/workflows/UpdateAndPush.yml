@@ -3,7 +3,7 @@ name: 同步【仓库】并推送到Gitee🔄
 on:
   push:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 */8 * * *'
   workflow_dispatch:
   # watch:
   #   types: started
