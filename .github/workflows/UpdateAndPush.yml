@@ -87,13 +87,13 @@ jobs:
           dst_token: ${{ secrets.GITEE_TOKEN }}
           debug: true
 
-      # 单一仓库内容内容同步到自己的gitee上
-      - name: 开始同步【MyUpdateTeam】仓库🔄
-        uses: Yikun/hub-mirror-action@master
-        with:
-          src: github/h455257166
-          dst: gitee/h455257166
-          static_list: "MyUpdateTeam"
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITEE_TOKEN }}
-          debug: true
+#       # 单一仓库内容内容同步到自己的gitee上
+#       - name: 开始同步【MyUpdateTeam】仓库🔄
+#         uses: Yikun/hub-mirror-action@master
+#         with:
+#           src: github/h455257166
+#           dst: gitee/h455257166
+#           static_list: "MyUpdateTeam"
+#           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+#           dst_token: ${{ secrets.GITEE_TOKEN }}
+#           debug: true
