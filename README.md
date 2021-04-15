@@ -30,3 +30,10 @@ Fiddler汉化版同步更新
 
 更新内容位于 [ Fiddler ] 分支
 
+# 京东脚本
+lxk0301/jd_scripts脚本备份·来自于第三方用户的仓库同步更新
+
+同步的仓库为 https://github.com/chinnkarahoi/jd_scripts.git   [ master ] 分支中的内容
+
+更新内容位于 [ JD ] 分支
+

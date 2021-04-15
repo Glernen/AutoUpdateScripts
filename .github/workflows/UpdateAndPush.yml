@@ -62,7 +62,17 @@ jobs:
           destination_branch: "Fiddler"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
 
-          
+#lxk0301/jd_scripts脚本备份
+      - name: 开始同步【lxk0301大佬脚本】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/chinnkarahoi/jd_scripts.git"
+          source_branch: "master"
+          destination_branch: "JD"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+
+
   github2gitee:
     runs-on: ubuntu-latest
     steps:
