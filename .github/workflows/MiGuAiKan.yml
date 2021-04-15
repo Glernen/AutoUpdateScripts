@@ -4,12 +4,13 @@ name: 咪咕爱看签到(main)
 
 on:
   workflow_dispatch:
-  push:
+  # push:
   pull_request:
   watch:
     types: started
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 0,1,2 * * *'
+    #北京时间八点九点十点运行，北京时间=国际时间+8小时
   
 jobs:
   migu-sign:
