@@ -73,6 +73,17 @@ jobs:
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
 
 
+#alfredfrancis/ai-chatbot-framework Ai聊天机器人
+      - name: 开始同步【Ai聊天机器人】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/alfredfrancis/ai-chatbot-framework.git"
+          source_branch: "master"
+          destination_branch: "AiChatBot"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+          
+
   github2gitee:
     runs-on: ubuntu-latest
     steps:
