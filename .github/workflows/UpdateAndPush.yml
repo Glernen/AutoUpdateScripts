@@ -31,6 +31,7 @@ jobs:
           destination_branch: "FreeVPN"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
+
 # 作者已删库，不再更新
 #       - name: 开始同步【DockerSource】🔄
 #         uses: repo-sync/github-sync@v2
@@ -40,6 +41,7 @@ jobs:
 #           source_branch: "source"
 #           destination_branch: "DockerSource"
 #           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+
 
 #签到脚本自用修改过，暂不更新
 #       - name: 开始同步【咪咕爱看签到脚本】🔄
@@ -62,15 +64,16 @@ jobs:
           destination_branch: "Fiddler"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
 
-#lxk0301/jd_scripts脚本备份
-      - name: 开始同步【lxk0301大佬脚本】🔄
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/chinnkarahoi/jd_scripts.git"
-          source_branch: "master"
-          destination_branch: "JD"
-          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+
+#原作者已删库，不再更新，lxk0301/jd_scripts脚本备份
+#      - name: 开始同步【lxk0301大佬脚本】🔄
+#        uses: repo-sync/github-sync@v2
+#        if: env.PAT
+#        with:
+#          source_repo: "https://github.com/chinnkarahoi/jd_scripts.git"
+#          source_branch: "master"
+#          destination_branch: "JD"
+#          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
 
 
 #alfredfrancis/ai-chatbot-framework Ai聊天机器人
@@ -83,6 +86,17 @@ jobs:
           destination_branch: "AiChatBot"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
           
+
+#Secriy/CloudMusic-LevelUp 网易云音乐刷歌升级脚本
+      - name: 开始同步【网易云音乐刷歌】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Secriy/CloudMusic-LevelUp.git"
+          source_branch: "master"
+          destination_branch: "CloudMusic"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+
 
   github2gitee:
     runs-on: ubuntu-latest

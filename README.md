@@ -30,10 +30,23 @@ Fiddler汉化版同步更新
 
 更新内容位于 [ Fiddler ] 分支
 
-# 京东脚本
-lxk0301/jd_scripts脚本备份·来自于第三方用户的仓库同步更新
+# 京东脚本(停止更新)
+lxk0301/jd_scripts脚本备份·来自于第三方用户的仓库同步更新,原作者已删库，故停止更新。
 
 同步的仓库为 https://github.com/chinnkarahoi/jd_scripts.git   [ master ] 分支中的内容
 
 更新内容位于 [ JD ] 分支
 
+# Ai聊天机器人
+来自于alfredfrancis/ai-chatbot-framework 源代码同步更新
+
+同步的仓库为 https://github.com/alfredfrancis/ai-chatbot-framework.git   [ master ] 分支中的内容
+
+更新内容位于 [ AiChatBot ] 分支
+
+# 网易云音乐刷歌升级脚本
+来自于Secriy/CloudMusic-LevelUp 源代码同步更新
+
+同步的仓库为 https://github.com/Secriy/CloudMusic-LevelUp.git   [ master ] 分支中的内容
+
+更新内容位于 [ CloudMusic ] 分支
