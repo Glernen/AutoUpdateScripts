@@ -1,0 +1,43 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: 网易云飞升
+
+on:
+  schedule:
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with: CloudMusic
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Run Script
+        env:
+          PHONE: ${{ secrets.PHONE }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          PASSWORD_PLAIN: ${{ secrets.PASSWORD_PLAIN }}
+          SC_KEY: ${{ secrets.SC_KEY }}
+          TG_BOT_KEY: ${{ secrets.TG_BOT_KEY }}
+          BARK_KEY: ${{ secrets.BARK_KEY }}
+          WECOM_KEY: ${{ secrets.WECOM_KEY }}
+          PUSH_PLUS_KEY: ${{ secrets.PUSH_PLUS_KEY }}
+        run: |
+          if [ ${PASSWORD_PLAIN} ]; then PASSWORD=$PASSWORD_PLAIN; fi
+          if [ ${SC_KEY} ];then SC_CMD="-s $SC_KEY"; fi
+          if [[ ${TG_BOT_KEY} ]];then TG_BOT_CMD="-t $TG_BOT_KEY"; fi
+          if [ ${BARK_KEY} ];then BARK_CMD="-b $BARK_KEY"; fi
+          if [[ ${WECOM_KEY} ]];then WECOM_CMD="-w $WECOM_KEY"; fi
+          if [ ${PUSH_PLUS_KEY} ];then PUSH_PLUS_CMD="-p $PUSH_PLUS_KEY"; fi
+          python3 action.py ${PHONE} ${PASSWORD} ${SC_CMD} ${TG_BOT_CMD} ${BARK_CMD} ${WECOM_CMD} ${PUSH_PLUS_CMD}
