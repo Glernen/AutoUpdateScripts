@@ -1,0 +1,37 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: 美团外卖神券
+
+on:
+  workflow_dispatch:
+  # push:
+  pull_request:
+  watch:
+    types: started
+  schedule:
+    - cron: "30 2 * * *"
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          ref: MeiTuan 
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn install
+      - name: Run app
+        run: yarn start
+        env:
+          TOKEN: ${{ secrets.MEITUAN_TOKEN }}
+          BARK_KEY: ${{ secrets.BARK_KEY }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          SC_SEND_KEY: ${{ secrets.SC_SEND_KEY }}
+          QYWX_SEND_CONF: ${{ secrets.QYWX_SEND_CONF }}
