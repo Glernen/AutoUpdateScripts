@@ -19,7 +19,7 @@ import urllib.parse
 
 # ==============  1.CSDN 个人信息 ============== #
 CSDN_ID = os.environ["CSDN_ID"]            # 必填！CSDN 的 ID
-COOKIE = os.environ["COOKIE"]              # 必填！已登录的 cookie
+COOKIE = os.environ["CSDN_COOKIE"]              # 必填！已登录的 cookie
 
 # ==============  2.功能开关配置项 ============== #
 # 填 on 则开启，开启的同时也需要配置3中的选项，不填或填其他则关闭
