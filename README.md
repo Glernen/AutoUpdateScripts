@@ -51,15 +51,17 @@ lxk0301/jd_scripts脚本备份·来自于第三方用户的仓库同步更新,�
 
 更新内容位于 [ CloudMusic ] 分支
 
-# 美团外卖神券
+# 美团外卖神券(暂停更新)
 来自于 vv314/actions-mtz-coupons 源代码同步更新
+修改了作者的变量代码，便于区分变量，故暂停更新。
 
 同步的仓库为 https://github.com/vv314/actions-mtz-coupons.git   [ main ] 分支中的内容
 
 更新内容位于 [ MeiTuan ] 分支
 
-# CSDN自动签到抽奖
+# CSDN自动签到抽奖(暂停更新)
 来自于 TRHX/CSDNSignIn 源代码同步更新
+修改了作者的变量代码，便于区分变量，故暂停更新。
 
 同步的仓库为 https://github.com/TRHX/CSDNSignIn.git   [ main ] 分支中的内容
 
