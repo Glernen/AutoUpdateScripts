@@ -23,7 +23,7 @@
 |  Name  |  是否为必填项  | 含义  | Value 示例 |
 |  -------   |   --------  |   --------  |   --------  |
 | **CSDN_ID** |   **是**  |  CSDN 的 ID  |   qq_36759224 |
-| **COOKIE** |    **是**  |  已登录的 cookie   |  uuid_tt_dd=10_287647...... |
+| **COOKIE_ID** |    **是**  |  已登录的 cookie   |  uuid_tt_dd=10_287647...... |
 | IF_LUCK_DRAW|    否  |  是否开启抽奖   |    on  |
 |  IF_SEVER|             否  |  是否开启 server 酱通知   |    on  |
 |  IF_WECHAT|          否  |  是否开启企业微信通知   |      on  |
@@ -38,7 +38,7 @@
 |  Name  |  Value  |
 |  -------   |   --------  |
 | CSDN_ID |  qq_36759224（你的 CSDN ID） |
-| COOKIE |  uuid_tt_dd=10_287647...... (复制过来的你的 cookie) |
+| COOKIE_ID |  uuid_tt_dd=10_287647...... (复制过来的你的 cookie) |
 | IF_LUCK_DRAW | on |
 |  IF_SEVER  |  on  |
 |  SEVER_SCKEY  |  SCU165692T...... （你的 server 酱 SCKEY）|
