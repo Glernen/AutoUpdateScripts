@@ -109,7 +109,7 @@ jobs:
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
 
 
-#vv314/actions-mtz-coupons 外卖神券天天领，超值红包享不停；以自动化的方式领取美团红包
+#TRHX/CSDNSignIn CSDN Sign In - CSDN 自动签到抽奖
       - name: 开始同步【CSDN自动签到抽奖】🔄
         uses: repo-sync/github-sync@v2
         if: env.PAT

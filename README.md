@@ -38,15 +38,29 @@ lxk0301/jd_scripts脚本备份·来自于第三方用户的仓库同步更新,�
 更新内容位于 [ JD ] 分支
 
 # Ai聊天机器人
-来自于alfredfrancis/ai-chatbot-framework 源代码同步更新
+来自于 alfredfrancis/ai-chatbot-framework 源代码同步更新
 
 同步的仓库为 https://github.com/alfredfrancis/ai-chatbot-framework.git   [ master ] 分支中的内容
 
 更新内容位于 [ AiChatBot ] 分支
 
 # 网易云音乐刷歌升级脚本
-来自于Secriy/CloudMusic-LevelUp 源代码同步更新
+来自于 Secriy/CloudMusic-LevelUp 源代码同步更新
 
 同步的仓库为 https://github.com/Secriy/CloudMusic-LevelUp.git   [ master ] 分支中的内容
 
 更新内容位于 [ CloudMusic ] 分支
+
+# 美团外卖神券
+来自于 vv314/actions-mtz-coupons 源代码同步更新
+
+同步的仓库为 https://github.com/vv314/actions-mtz-coupons.git   [ main ] 分支中的内容
+
+更新内容位于 [ MeiTuan ] 分支
+
+# CSDN自动签到抽奖
+来自于 TRHX/CSDNSignIn 源代码同步更新
+
+同步的仓库为 https://github.com/TRHX/CSDNSignIn.git   [ main ] 分支中的内容
+
+更新内容位于 [ CSDN ] 分支
