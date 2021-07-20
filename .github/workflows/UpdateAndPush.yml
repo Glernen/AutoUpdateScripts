@@ -98,6 +98,29 @@ jobs:
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
 
 
+#vv314/actions-mtz-coupons 外卖神券天天领，超值红包享不停；以自动化的方式领取美团红包
+      - name: 开始同步【美团外卖神券】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/vv314/actions-mtz-coupons.git"
+          source_branch: "main"
+          destination_branch: "MeiTuan"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+
+
+#vv314/actions-mtz-coupons 外卖神券天天领，超值红包享不停；以自动化的方式领取美团红包
+      - name: 开始同步【CSDN自动签到抽奖】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/TRHX/CSDNSignIn.git"
+          source_branch: "main"
+          destination_branch: "CSDN"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+
+
+
   github2gitee:
     runs-on: ubuntu-latest
     steps:
