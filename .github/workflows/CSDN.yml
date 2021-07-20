@@ -35,7 +35,7 @@ jobs:
           python3 CSDN.py 
         env: 
           CSDN_ID: ${{ secrets.CSDN_ID }}
-          COOKIE: ${{ secrets.CSDN_COOKIE }}
+          CSDN_COOKIE: ${{ secrets.CSDN_COOKIE }}
           IF_LUCK_DRAW: ${{ secrets.IF_LUCK_DRAW }}
           IF_SEVER: ${{ secrets.IF_SEVER }}
           IF_WECHAT: ${{ secrets.IF_WECHAT }}
