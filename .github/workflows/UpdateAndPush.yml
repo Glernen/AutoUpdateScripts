@@ -128,7 +128,7 @@ jobs:
       - name: 开始同步【AutoUpdateScripts】仓库🔄
         uses: Yikun/hub-mirror-action@master
         with:
-          src: github/h455257166
+          src: github/Glenven
           dst: gitee/h455257166
           static_list: "AutoUpdateScripts"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
