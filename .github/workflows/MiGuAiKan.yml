@@ -26,5 +26,5 @@ jobs:
         MIGUCOOKIE3: ${{ secrets.MIGUCOOKIE3 }}
         MIGUCOOKIE4: ${{ secrets.MIGUCOOKIE4 }}
       run: |
-        bash <(curl -sSL https://raw.githubusercontent.com/h455257166/AutoUpdateScripts/MiGuAiKan10086/migu.sh)
+        bash <(curl -sSL https://raw.githubusercontent.com/Glenven/AutoUpdateScripts/MiGuAiKan10086/migu.sh)
         
