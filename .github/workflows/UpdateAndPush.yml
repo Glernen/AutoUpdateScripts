@@ -88,14 +88,14 @@ jobs:
           
 
 #Secriy/CloudMusic-LevelUp 网易云音乐刷歌升级脚本
-      - name: 开始同步【网易云音乐刷歌】🔄
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/Secriy/CloudMusic-LevelUp.git"
-          source_branch: "master"
-          destination_branch: "CloudMusic"
-          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+#      - name: 开始同步【网易云音乐刷歌】🔄
+#        uses: repo-sync/github-sync@v2
+#        if: env.PAT
+#        with:
+#          source_repo: "https://github.com/Secriy/CloudMusic-LevelUp.git"
+#          source_branch: "master"
+#          destination_branch: "CloudMusic"
+#          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
 
 
 #vv314/actions-mtz-coupons 外卖神券天天领，超值红包享不停；以自动化的方式领取美团红包
