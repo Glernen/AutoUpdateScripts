@@ -83,7 +83,7 @@ def run():
 	print ("\n 【每日签到】" )
 	print ("=="*30)
 	CheckIn_confirm = CheckIn(cookies)
-	currDate = CheckIn_confirm['data']['currDate']#签到日期
+	currDate = CheckIn_confirm["data"]["currDate"]#签到日期
 	continueCheckIn = CheckIn_confirm['data']['continueCheckIn']#已签到的值为1
 	awardScore = CheckIn_confirm['data']['awardScore']#获得积分
 	awardExp = CheckIn_confirm['data']['awardExp']#获得经验值
