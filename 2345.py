@@ -6,7 +6,7 @@ import json
 import os
 
 # ==============  1.2345王牌联盟 cookie 变量 ============== #
-cookies = os.environ["WPLM_COOKIE"]  # 必填！2345王牌联盟 的 cookie
+WPLM_COOKIE = os.environ["WPLM_COOKIE"]  # 必填！2345王牌联盟 的 cookie
 
 
 headers = {
@@ -20,12 +20,13 @@ headers = {
 	'Accept-Encoding': 'gzip, deflate',
 	'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
 	'X-Requested-With': 'com.shouji2345',
+	'cookies':WPLM_COOKIE,
 }
 
 
 #周任务奖励领取
-def TaskWeekList(cookies):
-	r = requests.get('https://jifen.2345.com/appv4/task/DecennialList',headers=headers,cookies=cookies)
+def TaskWeekList():
+	r = requests.get('https://jifen.2345.com/appv4/task/DecennialList',headers=headers)
 	TaskWeekdata = r.json()
 	# print (TaskWeekdata)
 	GoldInfoList = TaskWeekdata['data']['goldInfo']['list']#奖励列表
@@ -47,16 +48,16 @@ def TaskWeekList(cookies):
 
 
 #2345APP端签到请求
-def CheckIn(cookies) -> None:
+def CheckIn():
 	try:
-		r_CheckIn = requests.get('https://jifen.2345.com/appv4/checkIn/index', headers=headers, cookies=cookies)
+		r_CheckIn = requests.get('https://jifen.2345.com/appv4/checkIn/index', headers=headers)
 		return r_CheckIn.json()
 	except Exception as e:
 		print (e)
 
 
 #2345积分统计
-def JiFen(cookies,month):
+def JiFen(month):
 	try:
 		headers = {
 			'Host': 'jifen.2345.com',
@@ -68,11 +69,12 @@ def JiFen(cookies,month):
 			'Accept-Encoding': 'gzip, deflate',
 			'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
 			'X-Requested-With': 'com.shouji2345',
+			'cookies':WPLM_COOKIE,
 		}
 		data = {
 			'queryMonth':month,
 		}
-		r_JiFen = requests.get('https://jifen.2345.com/appv4/jifen/entry?type=1', headers=headers, cookies=cookies, data=data)
+		r_JiFen = requests.get('https://jifen.2345.com/appv4/jifen/entry?type=1', headers=headers, data=data)
 		return r_JiFen.json()
 	except Exception as e:
 		print (e)
@@ -82,24 +84,23 @@ def run():
 
 	print ("\n 【每日签到】" )
 	print ("=="*30)
-	CheckIn_confirm = CheckIn(cookies)
-	currDate = CheckIn_confirm['data']['currDate']#签到日期
-	continueCheckIn = CheckIn_confirm['data']['continueCheckIn']#已签到的值为1
-	awardScore = CheckIn_confirm['data']['awardScore']#获得积分
-	awardExp = CheckIn_confirm['data']['awardExp']#获得经验值
+	currDate = CheckIn()['data']['currDate']#签到日期
+	continueCheckIn = CheckIn()['data']['continueCheckIn']#已签到的值为1
+	awardScore = CheckIn()['data']['awardScore']#获得积分
+	awardExp = CheckIn()['data']['awardExp']#获得经验值
 	print ("\n %s 已签到 积分+%s  经验值+%s \n" %(currDate,awardScore,awardExp))
 	print ("##"*30)
 
 ####################################################################################
 	print ("\n 【检查周任务状态】" )
 	print ("=="*30+"\n")
-	TaskWeekList(cookies)
+	TaskWeekList()
 
 ####################################################################################
 	print ("\n 【账户积分统计】" )
 	print ("=="*30)
 	month = time.strftime('%Y-%m',time.localtime())
-	Count = JiFen(cookies,month)['data']['userScore']
+	Count = JiFen(month)['data']['userScore']
 	deposits_yuan = Count['deposits']['yuan']#已存金额
 	uscore_yuan = Count['uscore']['yuan']#可提现金额
 	wscore_yuan = Count['wscore']['yuan']#待发金额
