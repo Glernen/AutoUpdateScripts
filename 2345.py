@@ -20,14 +20,14 @@ headers = {
 	'Accept-Encoding': 'gzip, deflate',
 	'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
 	'X-Requested-With': 'com.shouji2345',
-	'cookies':WPLM_COOKIE,
+	'cookie':WPLM_COOKIE,
 }
 
 
 #周任务奖励领取
 def TaskWeekList():
 	r = requests.get('https://jifen.2345.com/appv4/task/DecennialList',headers=headers)
-	TaskWeekdata = r.json()
+	TaskWeekdata = json.loads(r.text)
 	# print (TaskWeekdata)
 	GoldInfoList = TaskWeekdata['data']['goldInfo']['list']#奖励列表
 	TaskList = TaskWeekdata['data']['taskWeekList']
@@ -51,7 +51,7 @@ def TaskWeekList():
 def CheckIn():
 	try:
 		r_CheckIn = requests.get('https://jifen.2345.com/appv4/checkIn/index', headers=headers)
-		return r_CheckIn.json()
+		return json.loads(r_CheckIn.text)
 	except Exception as e:
 		print (e)
 
@@ -69,13 +69,13 @@ def JiFen(month):
 			'Accept-Encoding': 'gzip, deflate',
 			'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
 			'X-Requested-With': 'com.shouji2345',
-			'cookies':WPLM_COOKIE,
+			'cookie':WPLM_COOKIE,
 		}
 		data = {
 			'queryMonth':month,
 		}
 		r_JiFen = requests.get('https://jifen.2345.com/appv4/jifen/entry?type=1', headers=headers, data=data)
-		return r_JiFen.json()
+		return json.loads(r_JiFen.text)
 	except Exception as e:
 		print (e)
 
@@ -84,10 +84,11 @@ def run():
 
 	print ("\n 【每日签到】" )
 	print ("=="*30)
-	currDate = CheckIn()['data']['currDate']#签到日期
-	continueCheckIn = CheckIn()['data']['continueCheckIn']#已签到的值为1
-	awardScore = CheckIn()['data']['awardScore']#获得积分
-	awardExp = CheckIn()['data']['awardExp']#获得经验值
+	CheckIn_confirm = CheckIn()
+	currDate = CheckIn_confirm['data']['currDate']#签到日期
+	continueCheckIn = CheckIn_confirm['data']['continueCheckIn']#已签到的值为1
+	awardScore = CheckIn_confirm['data']['awardScore']#获得积分
+	awardExp = CheckIn_confirm['data']['awardExp']#获得经验值
 	print ("\n %s 已签到 积分+%s  经验值+%s \n" %(currDate,awardScore,awardExp))
 	print ("##"*30)
 
