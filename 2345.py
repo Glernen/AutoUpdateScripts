@@ -8,15 +8,6 @@ import os
 # ==============  1.2345王牌联盟 cookie 变量 ============== #
 cookies = os.environ["WPLM_COOKIE"]  # 必填！2345王牌联盟 的 cookie
 
-# cookies = {
-# 		'I': 'i=7685490&u=8220980&n=h455257166&m=0&t=1592992889.51566999.99999999&s=fca57e7ed5b79e9b87c97e68bdc4498a&v=1.1;', 
-# 		'os': 'android', 
-# 		'uid': '8220980', 
-# 		'isSimulate': '0', 
-# 		'requestFromApp': '1', 
-# 		'isFromRn': '1', 
-# 		'appversion': '459'
-# }
 
 headers = {
 	'Host': 'jifen.2345.com',
@@ -91,11 +82,11 @@ def run():
 
 	print ("\n 【每日签到】" )
 	print ("=="*30)
-	CheckIn_confirm = CheckIn(cookies)['data']
-	currDate = CheckIn_confirm['currDate']#签到日期
-	continueCheckIn = CheckIn_confirm['continueCheckIn']#已签到的值为1
-	awardScore = CheckIn_confirm['awardScore']#获得积分
-	awardExp = CheckIn_confirm['awardExp']#获得经验值
+	CheckIn_confirm = CheckIn(cookies)
+	currDate = CheckIn_confirm['data']['currDate']#签到日期
+	continueCheckIn = CheckIn_confirm['data']['continueCheckIn']#已签到的值为1
+	awardScore = CheckIn_confirm['data']['awardScore']#获得积分
+	awardExp = CheckIn_confirm['data']['awardExp']#获得经验值
 	print ("\n %s 已签到 积分+%s  经验值+%s \n" %(currDate,awardScore,awardExp))
 	print ("##"*30)
 
