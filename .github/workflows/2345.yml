@@ -30,7 +30,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: CSDN
+      - name: 2345签到
         run: |
           python3 2345.py 
         env: 
