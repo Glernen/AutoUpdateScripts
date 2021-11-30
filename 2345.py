@@ -1,4 +1,11 @@
 # 2345王牌联盟签到
+# ====================================
+# --*-- coding: utf-8 --*--
+# @Time    : 2021-11-30
+# @Author  : XiaoMing
+# @FileName: 2345.py
+# @Software: Sublime Text
+# ====================================
 
 import requests
 import time
