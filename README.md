@@ -44,13 +44,6 @@ lxk0301/jd_scripts脚本备份·来自于第三方用户的仓库同步更新,�
 
 更新内容位于 [ AiChatBot ] 分支
 
-# 网易云音乐刷歌升级脚本
-来自于 Secriy/CloudMusic-LevelUp 源代码同步更新
-
-同步的仓库为 https://github.com/Secriy/CloudMusic-LevelUp.git   [ master ] 分支中的内容
-
-更新内容位于 [ CloudMusic ] 分支
-
 # 美团外卖神券(暂停更新)
 来自于 vv314/actions-mtz-coupons 源代码同步更新
 修改了作者的变量代码，便于区分变量，故暂停更新。
