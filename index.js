@@ -9,7 +9,7 @@ const parseToken = require('./lib/parse-token')
 const updateNotifier = require('./lib/update-notifier')
 const { getCoupons } = require('./lib/coupons')
 
-const TOKEN = process.env.TOKEN
+const TOKEN = process.env.MEITUAN_TOKEN
 const notifier = new Notifier({
   barkKey: process.env.BARK_KEY,
   larkWebhook: process.env.LARK_WEBHOOK,
