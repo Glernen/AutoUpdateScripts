@@ -2,8 +2,8 @@ name: EPIC # 修改你的名称
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "25 20 * * 4" # 修改你的定时配置
+#  schedule:
+#    - cron: "25 20 * * 4" # 修改你的定时配置
 
 jobs:
   setup:
