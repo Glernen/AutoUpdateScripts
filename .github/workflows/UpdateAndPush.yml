@@ -110,6 +110,17 @@ jobs:
 #          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
 
+#QIN2DIM/epic-awesome-gamer - EPIC 免费人
+      - name: 开始同步【EPIC 免费人】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/QIN2DIM/epic-awesome-gamer.git"
+          source_branch: "main"
+          destination_branch: "EPIC"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
+
+
 
   github2gitee:
     runs-on: ubuntu-latest
