@@ -59,3 +59,10 @@ lxk0301/jd_scripts脚本备份·来自于第三方用户的仓库同步更新,�
 同步的仓库为 https://github.com/TRHX/CSDNSignIn.git   [ main ] 分支中的内容
 
 更新内容位于 [ CSDN ] 分支
+
+# EPIC 免费人
+来自于 QIN2DIM/epic-awesome-gamer 源代码同步更新
+
+同步的仓库为 https://github.com/QIN2DIM/epic-awesome-gamer.git   [ main ] 分支中的内容
+
+更新内容位于 [ EPIC ] 分支
