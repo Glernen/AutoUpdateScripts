@@ -55,14 +55,14 @@ jobs:
 
 
 #Fiddler中文版
-      - name: 开始同步【Fiddler中文版】🔄
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/gabrielxvx/zh-fiddler.git"
-          source_branch: "master"
-          destination_branch: "Fiddler"
-          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+#      - name: 开始同步【Fiddler中文版】🔄
+#        uses: repo-sync/github-sync@v2
+#        if: env.PAT
+#        with:
+#          source_repo: "https://github.com/gabrielxvx/zh-fiddler.git"
+#          source_branch: "master"
+#          destination_branch: "Fiddler"
+#          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
 
 
 #原作者已删库，不再更新，lxk0301/jd_scripts脚本备份
@@ -77,14 +77,14 @@ jobs:
 
 
 #alfredfrancis/ai-chatbot-framework Ai聊天机器人
-      - name: 开始同步【Ai聊天机器人】🔄
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/alfredfrancis/ai-chatbot-framework.git"
-          source_branch: "master"
-          destination_branch: "AiChatBot"
-          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+#      - name: 开始同步【Ai聊天机器人】🔄
+#        uses: repo-sync/github-sync@v2
+#        if: env.PAT
+#        with:
+#          source_repo: "https://github.com/alfredfrancis/ai-chatbot-framework.git"
+#          source_branch: "master"
+#          destination_branch: "AiChatBot"
+#          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }} 
           
 
 
@@ -120,6 +120,16 @@ jobs:
           destination_branch: "EPIC"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
+
+#yml2213/javascript - 羊毛
+      - name: 开始同步【yml2213的羊毛脚本】🔄
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/yml2213/javascript.git"
+          source_branch: "main"
+          destination_branch: "WOOL_yml2213"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
 
   github2gitee:
