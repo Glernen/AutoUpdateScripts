@@ -128,7 +128,7 @@ jobs:
         with:
           source_repo: "https://github.com/yml2213/javascript.git"
           source_branch: "master"
-          destination_branch: "WOOL_yml2213"
+          destination_branch: "WOOL-yml2213"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
 
