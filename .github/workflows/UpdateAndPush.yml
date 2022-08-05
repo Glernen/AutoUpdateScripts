@@ -132,19 +132,19 @@ jobs:
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
 
 
-  github2gitee:
-    runs-on: ubuntu-latest
-    steps:
-      # 单一仓库内容内容同步到自己的gitee上
-      - name: 开始同步【AutoUpdateScripts】仓库🔄
-        uses: Yikun/hub-mirror-action@master
-        with:
-          src: github/Glenven
-          dst: gitee/h455257166
-          static_list: "AutoUpdateScripts"
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITEE_TOKEN }}
-          debug: true
+#  github2gitee:
+#    runs-on: ubuntu-latest
+#    steps:
+#      # 单一仓库内容内容同步到自己的gitee上
+#      - name: 开始同步【AutoUpdateScripts】仓库🔄
+#        uses: Yikun/hub-mirror-action@master
+#        with:
+#          src: github/Glenven
+#          dst: gitee/h455257166
+#          static_list: "AutoUpdateScripts"
+#          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+#          dst_token: ${{ secrets.GITEE_TOKEN }}
+#          debug: true
 
 #       # 单一仓库内容内容同步到自己的gitee上
 #       - name: 开始同步【MyUpdateTeam】仓库🔄
